@@ -6,7 +6,7 @@
 /*   By: mlouazir <mlouazir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 16:44:18 by mlouazir          #+#    #+#             */
-/*   Updated: 2024/06/08 16:28:14 by mlouazir         ###   ########.fr       */
+/*   Updated: 2024/06/08 22:24:07 by mlouazir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,4 @@ int main()
 	std::cout << "System Closed" << std::endl;
 	return 0;
 }
+

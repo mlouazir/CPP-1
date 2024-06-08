@@ -1,8 +1,23 @@
 SRC= main.cpp PhoneBook.cpp
 
-NAME=phonebook
+OBJ= $(SRC:.cpp=.o)
 
-all:$(NAME)
+NAME= myPhoneBook
 
-$(NAME): ./*.cpp
-	c++ -Wall -Wextra -Werror -std=c++98 main.cpp PhoneBook.cpp -o $@
+all: $(NAME)
+
+$(NAME):$(OBJ)
+	c++ -Wall -Wextra -Werror -std=c++98 $(OBJ) -o $@
+
+%.o:%.cpp *.hpp
+	c++ -Wall -Wextra -Werror -std=c++98 -c $< -o $@
+
+clean:
+	rm -rf $(OBJ)
+
+fclean:clean
+	rm -rf $(NAME)
+
+re: fclean all
+
+.PHONY: clean

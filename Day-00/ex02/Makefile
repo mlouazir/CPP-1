@@ -1,15 +1,15 @@
-SRC= megaphone.cpp
+SRC= tests.cpp Account.cpp
 
-OBJ= megaphone.o
+OBJ= $(SRC:.cpp=.o)
 
-NAME= megaphone
+NAME= myPhoneBook
 
 all: $(NAME)
 
 $(NAME):$(OBJ)
 	c++ -Wall -Wextra -Werror -std=c++98 $(OBJ) -o $@
 
-%.o:%.cpp
+%.o:%.cpp *.hpp
 	c++ -Wall -Wextra -Werror -std=c++98 -c $< -o $@
 
 clean:

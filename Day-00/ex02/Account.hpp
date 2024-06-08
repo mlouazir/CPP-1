@@ -12,6 +12,8 @@
 #ifndef __ACCOUNT_H__
 #define __ACCOUNT_H__
 
+#include <iostream>
+#include <iomanip>
 // ************************************************************************** //
 //                               Account Class                                //
 // ************************************************************************** //
@@ -23,10 +25,10 @@ public:
 
 	typedef Account		t;
 
-	static int	getNbAccounts( void );
-	static int	getTotalAmount( void );
-	static int	getNbDeposits( void );
-	static int	getNbWithdrawals( void );
+	static int	getNbAccounts( void ) {return _nbAccounts;};
+	static int	getTotalAmount( void ) {return _totalAmount;};
+	static int	getNbDeposits( void ) {return _totalNbDeposits;};
+	static int	getNbWithdrawals( void ) {return _totalNbWithdrawals;};
 	static void	displayAccountsInfos( void );
 
 	Account( int initial_deposit );
@@ -34,7 +36,7 @@ public:
 
 	void	makeDeposit( int deposit );
 	bool	makeWithdrawal( int withdrawal );
-	int		checkAmount( void ) const;
+	int		checkAmount( void ) const {return _amount;};
 	void	displayStatus( void ) const;
 
 
