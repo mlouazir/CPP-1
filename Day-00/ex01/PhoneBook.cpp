@@ -6,7 +6,7 @@
 /*   By: mlouazir <mlouazir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 16:38:27 by mlouazir          #+#    #+#             */
-/*   Updated: 2024/06/08 16:27:37 by mlouazir         ###   ########.fr       */
+/*   Updated: 2024/06/09 13:37:39 by mlouazir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ void	printContactInfo(Contact contact)
 void	printColumns(int pass, int i, \
 std::string firstName, std::string lastName, std::string nickName)
 {
-	std::cout.width(10); std::cout << "---------------------------------------------\n";
-	std::cout.width(1); std::cout << std::right << "|";
+	std::cout << "---------------------------------------------\n";
+	std::cout << std::right << "|";
 	if (!pass)
 	{
 		std::cout.width(10);
@@ -82,13 +82,13 @@ std::string firstName, std::string lastName, std::string nickName)
 		std::cout.width(10);
 		std::cout << std::right << i;
 	}
-	std::cout.width(1); std::cout << std::right << "|";
+	std::cout << std::right << "|";
 	truncIfNeeded(firstName);
-	std::cout.width(1); std::cout << std::right << "|";
+	std::cout << std::right << "|";
 	truncIfNeeded(lastName);
-	std::cout.width(1); std::cout << std::right << "|";
+	std::cout << std::right << "|";
 	truncIfNeeded(nickName);
-	std::cout.width(1); std::cout << std::right << "|" << std::endl;
+	std::cout << std::right << "|" << std::endl;
 }
 
 int	PhoneBook::search(void)
@@ -108,7 +108,7 @@ int	PhoneBook::search(void)
 	std::cout.width(10); std::cout << "---------------------------------------------\n";
 	std::cout << "Choose the index\n";
 	std::cin >> input;
-	while (std::cin.fail() || input > this->counter || input > 7)
+	while (std::cin.fail() || input > this->counter || input > 7 || input < 0)
 	{
 		if (std::cin.eof())
 			return (1);
