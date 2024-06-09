@@ -6,7 +6,7 @@
 /*   By: mlouazir <mlouazir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 16:38:27 by mlouazir          #+#    #+#             */
-/*   Updated: 2024/06/09 13:37:39 by mlouazir         ###   ########.fr       */
+/*   Updated: 2024/06/09 15:32:42 by mlouazir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,9 @@ int	PhoneBook::add(void)
 	std::cin >> newContact.darkest_secret;
 	if (std::cin.eof())
 		return (1);
-	if (this->counter < 8)
-		this->contacts[this->counter] = newContact;
-	else
-		this->contacts[0] = newContact;
+	if (this->counter > 7)
+		this->counter = 0;
+	this->contacts[this->counter] = newContact;
 	return (this->counter++, 0);
 }
 
@@ -108,13 +107,15 @@ int	PhoneBook::search(void)
 	std::cout.width(10); std::cout << "---------------------------------------------\n";
 	std::cout << "Choose the index\n";
 	std::cin >> input;
-	while (std::cin.fail() || input > this->counter || input > 7 || input < 0)
+	while (std::cin.fail() || input > this->counter - 1 \
+	|| input > 7 || input < 0)
 	{
 		if (std::cin.eof())
 			return (1);
 		std::cout << "Wrong input, try again\n";
 		std::cin.clear();
 		std::cin.ignore(INT_MAX, '\n');
+		std::cout << "Choose the index\n";
 		std::cin >> input;
 	}
 	printContactInfo(this->contacts[input]);
