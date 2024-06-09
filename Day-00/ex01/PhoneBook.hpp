@@ -6,7 +6,7 @@
 /*   By: mlouazir <mlouazir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 16:38:38 by mlouazir          #+#    #+#             */
-/*   Updated: 2024/06/08 22:24:21 by mlouazir         ###   ########.fr       */
+/*   Updated: 2024/06/10 00:01:56 by mlouazir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,13 @@ class PhoneBook
 private:
 	Contact contacts[8];
 	int		counter;
+	int		size;
 
 public:
-	PhoneBook() : counter(0){};
+	PhoneBook() : counter(0), size(0){};
 	int	add(void);
 	int	search(void);
-	void printContacts(void);
 };
 
+int	isEmpty(std::string input);
 #endif

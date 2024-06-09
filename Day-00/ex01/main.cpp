@@ -6,7 +6,7 @@
 /*   By: mlouazir <mlouazir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 16:44:18 by mlouazir          #+#    #+#             */
-/*   Updated: 2024/06/09 13:35:49 by mlouazir         ###   ########.fr       */
+/*   Updated: 2024/06/10 00:14:09 by mlouazir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@ int main()
 	PhoneBook		phoneBook;
 	std::string		input;
 	std::string		tmp;
-	int				result = 0;
+	int				result;
 
 	while (1)
 	{
+		result = 0;
 		std::cout << "Enter One of Three = ADD - SEARCH - EXIT\n";
-		std::cin >> input;
+		getline(std::cin, input);
 		if (std::cin.eof())
 			break;
 		if (input == "ADD")
@@ -31,12 +32,11 @@ int main()
 			result = phoneBook.search();
 		else if (input == "EXIT")
 			break ;
-		else
+		else if (!isEmpty(input) && input.length() > 0)
 			std::cout << "Wrong input\n";
-		if (result)
+		if (std::cin.eof())
 			break ;
 	}
 	std::cout << "System Closed" << std::endl;
 	return 0;
 }
-
