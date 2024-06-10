@@ -2,7 +2,7 @@ SRC= tests.cpp Account.cpp
 
 OBJ= $(SRC:.cpp=.o)
 
-NAME= myPhoneBook
+NAME= account
 
 all: $(NAME)
 

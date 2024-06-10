@@ -6,7 +6,7 @@
 /*   By: mlouazir <mlouazir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 16:38:27 by mlouazir          #+#    #+#             */
-/*   Updated: 2024/06/10 00:35:16 by mlouazir         ###   ########.fr       */
+/*   Updated: 2024/06/10 10:36:33 by mlouazir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,7 +139,7 @@ int	PhoneBook::search(void)
 	std::string input;
 	int	i = 0;
 
-	if (!this->counter)
+	if (!this->size)
 		return (std::cout << "No Contacts Saved\n", 0);
 	printColumns(0, 0, "first name", "last name", "nickname");
 	while (i < this->size)
@@ -148,7 +148,8 @@ int	PhoneBook::search(void)
 		this->contacts[i].last_name, this->contacts[i].nickname);
 		i++;
 	}
-	std::cout.width(10); std::cout << "---------------------------------------------\n";
+	std::cout.width(10);
+	std::cout << "---------------------------------------------\n";
 	std::cout << "Choose the index\n";
 	input = setInput();
 	if (std::cin.eof())
