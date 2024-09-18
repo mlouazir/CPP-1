@@ -1,17 +1,17 @@
-SRC=newZombie.cpp randomChump.cpp Zombie.cpp main.cpp
+SRC=ScavTrap.cpp ClapTrap.cpp main.cpp
 
 OBJ=$(SRC:.cpp=.o)
 
-FLAGS=-Wall -Wextra -Werror -std=c++98 # -fsanitize=address -g
+FLAGS=-Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
 
-NAME=zombie
+NAME=scavTrap
 
 all:$(NAME)
 
 $(NAME):$(OBJ)
 	c++ $(FLAGS) $(OBJ) -o $@
 
-%.o : %.cpp Zombie.hpp
+%.o : %.cpp ClapTrap.hpp ScavTrap.hpp
 	c++ $(FLAGS) -c $< -o $@
 
 clean:

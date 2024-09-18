@@ -1,17 +1,16 @@
-SRC=newZombie.cpp randomChump.cpp Zombie.cpp main.cpp
-
+SRC=Fixed.cpp main.cpp Point.cpp bsp.cpp
 OBJ=$(SRC:.cpp=.o)
 
-FLAGS=-Wall -Wextra -Werror -std=c++98 # -fsanitize=address -g
+FLAGS=-Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
 
-NAME=zombie
+NAME=fixed
 
 all:$(NAME)
 
 $(NAME):$(OBJ)
 	c++ $(FLAGS) $(OBJ) -o $@
 
-%.o : %.cpp Zombie.hpp
+%.o : %.cpp Fixed.hpp Point.hpp
 	c++ $(FLAGS) -c $< -o $@
 
 clean:

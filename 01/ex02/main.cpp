@@ -12,7 +12,7 @@ int main()
 
     std::cout << "stringPTR variable address :" << stringPTR << '\n';
 
-    std::cout << "stringREF variable address :" << stringREF << '\n';
+    std::cout << "stringREF variable address :" << &stringREF << '\n';
 
     std::cout << "STR variable value :" << str << '\n';
 
