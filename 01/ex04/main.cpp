@@ -10,6 +10,8 @@ int main(int ac, char **av)
     
     if (ac != 4)
         return (std::cout << "Invalid Input: Please provide :\n<filename> string1 string2\n", 1);
+    if (!av[2][0] || !av[3][0])
+        return (std::cout << "Invalid Input: Please provide :\n<filename> string1 string2\n", 1);
     std::string fileName = av[1];
     inFile.open(fileName.c_str(), std::ios::in);
     if (!inFile.is_open())
@@ -31,8 +33,6 @@ int main(int ac, char **av)
             str.insert(pos, av[3]);
         } 
         outFile.write(str.c_str(), str.length());
-        // if (!inFile.eof())
-        //     outFile.write("\n", 1);
     }
     
     return 0;

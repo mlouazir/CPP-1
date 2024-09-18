@@ -9,13 +9,11 @@ class Zombie
 private:
     std::string name;
 public:
-    Zombie() {};
-    Zombie( std::string name ) : name(name) {}
+    Zombie( void );
+    Zombie( std::string name );
     void announce( void );
     void setZombieName( std::string name );
-    ~Zombie() {
-        std::cout << name << std::endl;
-    };
+    ~Zombie();
 };
 
 Zombie* zombieHorde( int N, std::string name );
