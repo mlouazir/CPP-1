@@ -18,7 +18,7 @@ int main()
 
     std::cout << "stringPTR variable value :" << *stringPTR << '\n';
 
-    std::cout << "stringREF variable value :" << stringREF << '\n';
+    std::cout << "stringREF variable value :" << stringREF << std::endl;
 
     return 0;
 }

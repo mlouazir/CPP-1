@@ -23,14 +23,16 @@ int main(int ac, char **av)
         at = 0;
         pos = 0;
         getline(inFile, str);
+        str += "\n";
         while ((pos = str.find(av[2], at), pos != -1))
         {
-            at = pos;
+            at = pos + 1;
             str.erase(pos, strlen(av[2]));
             str.insert(pos, av[3]);
         } 
         outFile.write(str.c_str(), str.length());
-        outFile.write("\n", 1);
+        // if (!inFile.eof())
+        //     outFile.write("\n", 1);
     }
     
     return 0;

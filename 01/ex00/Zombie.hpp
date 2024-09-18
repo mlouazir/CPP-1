@@ -14,8 +14,8 @@ public:
     ~Zombie() {std::cout << name << std::endl;};
 };
 
-void randomChump( std::string name);
+void randomChump( std::string name );
 
-Zombie* newZombie( std::string name);
+Zombie* newZombie( std::string name );
 
 #endif

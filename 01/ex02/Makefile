@@ -2,7 +2,7 @@ SRC=main.cpp
 
 OBJ=$(SRC:.cpp=.o)
 
-FLAGS=-Wall -Wextra -Werror -std=c++98 # -fsanitize=address -g
+FLAGS= -Wall -Wextra -Werror -std=c++98 # -fsanitize=address -g
 
 NAME=main
 
@@ -11,7 +11,7 @@ all:$(NAME)
 $(NAME):$(OBJ)
 	c++ $(FLAGS) $(OBJ) -o $@
 
-%.o : %.cpp Zombie.hpp
+%.o : %.cpp 
 	c++ $(FLAGS) -c $< -o $@
 
 clean:

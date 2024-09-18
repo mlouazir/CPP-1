@@ -12,6 +12,5 @@ int main()
     }
 
     delete[] zo;
-
     return 0;
 }
