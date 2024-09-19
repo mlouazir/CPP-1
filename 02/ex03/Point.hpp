@@ -7,17 +7,17 @@ class Point
 private:
     Fixed const x;
     Fixed const y;
+    Fixed notX;
+    Fixed notY;
 public:
-    Point() : x(Fixed(0)), y(Fixed(0)) {};
-    Point( const float num1, const float num2 ) : x(Fixed(num1)), y(Fixed(num2)) {};
-    // Point( Point& obj ) {*this = obj;};
-    // Fixed& operator=( const Point& obj ) {
-    //     if (this != &obj) {
-    //         this->x = obj.getX();
-    //     }
-    // };
-    float getXFloat();
-    float getYFloat();
+    Point();
+    Point( const float num1, const float num2 );
+    Point( const Point& obj );
+    Point& operator=( const Point& obj );
+    float getXFloat() const;
+    float getYFloat() const;
+    Fixed getXFixed() const;
+    Fixed getYFixed() const;
     ~Point() {};
 };
 

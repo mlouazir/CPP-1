@@ -18,6 +18,8 @@ int main(int ac, char **av)
         return (std::cout << "Please providea valid file.\n", 1);
     fileName += ".replace";
     outFile.open(fileName.c_str());
+    if (!outFile.is_open())
+        return (std::cout << "An Error Occured While Opening The New File\n", 1);
     int at = 0;
     int pos = 0;
     while (!inFile.eof())

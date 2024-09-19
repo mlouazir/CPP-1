@@ -1,6 +1,6 @@
 #include "Point.hpp"
 
-float aera( Point p1, Point p2, Point p3)
+float aera( Point const p1, Point const p2, Point const p3)
 {
     float a = (p1.getXFloat() * (p2.getYFloat() - p3.getYFloat()) + p2.getXFloat() *(p3.getYFloat() - p1.getYFloat()) + p3.getXFloat() * (p1.getYFloat() - p2.getYFloat()))/2.0;
     if (a < 0)
