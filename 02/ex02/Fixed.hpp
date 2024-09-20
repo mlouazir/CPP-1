@@ -40,6 +40,6 @@ public:
     ~Fixed();
 };
 
-std::ostream& operator<<( std::ostream& stream, const Fixed& obj);
+std::ostream& operator<<( std::ostream& stream, const Fixed& obj );
 
 #endif

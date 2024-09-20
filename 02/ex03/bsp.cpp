@@ -16,5 +16,7 @@ bool bsp( Point const a, Point const b, Point const c, Point const point)
     float fractionTwo = aera(b, point, c);
     float fractionThree = aera(a, point, b);
 
+    if (!fractionOne || !fractionTwo || !fractionThree)
+        return false;
     return totalArea == fractionOne + fractionTwo + fractionThree;
 }

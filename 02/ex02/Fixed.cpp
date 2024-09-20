@@ -10,12 +10,12 @@ Fixed::Fixed( const Fixed &object )
     *this = object;
 }
 
-Fixed::Fixed( const int num)
+Fixed::Fixed( const int num )
 {
     this->value = num * (1 << this->frac);
 }
 
-Fixed::Fixed( const float num)
+Fixed::Fixed( const float num )
 {
     this->value = roundf(num * (1 << this->frac));
 }

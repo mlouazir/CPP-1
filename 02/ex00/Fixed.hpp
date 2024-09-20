@@ -11,7 +11,7 @@ private:
 public:
     Fixed();
     Fixed( const Fixed &object );
-    Fixed& operator=(const Fixed& other);
+    Fixed& operator=( const Fixed& other );
     int getRawBits( void ) const;
     void setRawBits( int const raw );
     ~Fixed();
