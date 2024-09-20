@@ -1,7 +1,7 @@
 SRC=Fixed.cpp main.cpp Point.cpp bsp.cpp
 OBJ=$(SRC:.cpp=.o)
 
-FLAGS=-Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
+FLAGS=-Wall -Wextra -Werror -std=c++98 # -fsanitize=address -g
 
 NAME=fixed
 
