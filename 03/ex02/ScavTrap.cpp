@@ -22,7 +22,7 @@ ScavTrap::ScavTrap( const ScavTrap& obj )
     *this = obj;
 }
 
-ScavTrap& ScavTrap::operator=(const ScavTrap& obj )
+ScavTrap& ScavTrap::operator=(const ScavTrap& obj)
 {
     if (this != &obj) {
         this->name = obj.getName();

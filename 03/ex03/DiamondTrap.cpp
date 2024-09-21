@@ -1,0 +1,48 @@
+#include "DiamondTrap.hpp"
+
+DiamondTrap::DiamondTrap()
+{
+    this->hitPoints = FragTrap::getHitPoints();
+    this->energyPoints = ScavTrap::getEnergyPoints();
+    this->attackDamage = FragTrap::getAttackDamage();
+}
+
+DiamondTrap::DiamondTrap( const std::string& name ) : ClapTrap(name + "_clap_name")
+{
+    this->clapName = name + "_clap_name";
+    this->name = name;
+    this->hitPoints = FragTrap::getHitPoints();
+    this->energyPoints = ScavTrap::getEnergyPoints();
+    this->attackDamage = FragTrap::getAttackDamage();
+}
+
+DiamondTrap::DiamondTrap( const DiamondTrap& obj )
+{
+    *this = obj;
+}
+
+DiamondTrap& DiamondTrap::operator=( const DiamondTrap& obj )
+{
+    if (this != &obj) {
+        this->name = obj.getName();
+        this->clapName = obj.getClapName();
+        this->hitPoints = obj.getHitPoints();
+        this->energyPoints = obj.getEnergyPoints();
+        this->attackDamage = obj.getAttackDamage();
+    }
+    return *this;
+}
+
+std::string DiamondTrap::getClapName() const
+{
+    return this->clapName;
+}
+void DiamondTrap::whoAmI( )
+{
+    std::cout << "My name is " << name << " and my clapTap name ` " << clapName << "\n";
+}
+
+DiamondTrap::~DiamondTrap( )
+{
+
+}

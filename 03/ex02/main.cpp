@@ -2,11 +2,18 @@
 
 int main()
 {
-    std::string name = "hmed";
+    // std::string name = "hmed";
 
-    ScavTrap s(name);
-    // ClapTrap c1(name);
+    ScavTrap s("John");
 
+    // std::string (ScavTrap::*func1) () const = &ScavTrap::getName;
+    // s.guardGate();
+
+    ClapTrap c1("John");
+
+    // std::string (ClapTrap::*func2) () const = &ClapTrap::getName;
+
+    // printf("1-%p\n2-%p\n", *func1, *func2);
     // c1.attack("test");
 
     // c1.attack("test");

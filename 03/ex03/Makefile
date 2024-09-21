@@ -1,4 +1,4 @@
-SRC=ScavTrap.cpp ClapTrap.cpp FragTrap.cpp main.cpp
+SRC=ScavTrap.cpp ClapTrap.cpp FragTrap.cpp DiamondTrap.cpp main.cpp
 
 OBJ=$(SRC:.cpp=.o)
 
@@ -11,7 +11,7 @@ all:$(NAME)
 $(NAME):$(OBJ)
 	c++ $(FLAGS) $(OBJ) -o $@
 
-%.o : %.cpp ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
+%.o : %.cpp ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 	c++ $(FLAGS) -c $< -o $@
 
 clean:

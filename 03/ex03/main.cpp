@@ -1,15 +1,18 @@
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
     // std::string name = "hmed";
 
-    ScavTrap s("John");
+    // ScavTrap s("John");
 
+    DiamondTrap a;
+
+    a.attack("test");
     // std::string (ScavTrap::*func1) () const = &ScavTrap::getName;
     // s.guardGate();
 
-    ClapTrap c1("John");
+    // ClapTrap c1("John");
 
     // std::string (ClapTrap::*func2) () const = &ClapTrap::getName;
 
