@@ -7,6 +7,7 @@
 class Fixed
 {
 private:
+    std::ostream& stream;
     int value;
     static const int frac = 8;
 public:
@@ -20,8 +21,8 @@ public:
     float toFloat( void ) const;
     int toInt( void ) const;
     ~Fixed();
+    std::ostream& operator<<( const Fixed& obj );
 };
 
-std::ostream& operator<<( std::ostream& stream, const Fixed& obj );
 
 #endif

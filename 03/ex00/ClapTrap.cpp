@@ -17,8 +17,7 @@ ClapTrap::ClapTrap( const ClapTrap& obj )
 
 ClapTrap& ClapTrap::operator=( const ClapTrap& obj )
 {
-    if (this != &obj)
-    {
+    if (this != &obj) {
         this->name = obj.getName();
         this->hitPoints = obj.getHitPoints();
         this->energyPoints = obj.getEnergyPoints();

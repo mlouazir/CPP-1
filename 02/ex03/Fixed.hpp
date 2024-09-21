@@ -10,6 +10,7 @@ private:
     int value;
     static const int frac = 8;
 public:
+    int thistest(std::string value);
     Fixed();
     Fixed( const int num );
     Fixed( const float num );
@@ -23,7 +24,7 @@ public:
     bool operator!=( const Fixed &obj ) const;
     Fixed operator+( const Fixed &obj ) const;
     Fixed operator-( const Fixed &obj ) const;
-    Fixed operator*( const Fixed &obj ) const;
+    // Fixed operator*( const Fixed &obj ) const;
     Fixed operator/( const Fixed &obj ) const;
     Fixed& operator++( void );
     Fixed& operator--( void );
@@ -39,7 +40,9 @@ public:
     static const Fixed& max( const Fixed& obj1, const Fixed& obj2 );
     ~Fixed();
 };
-
 std::ostream& operator<<( std::ostream& stream, const Fixed& obj );
+
+Fixed operator*( const Fixed &lobj, const Fixed &obj ) ;
+
 
 #endif

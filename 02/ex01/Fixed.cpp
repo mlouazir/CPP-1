@@ -1,23 +1,23 @@
 #include "Fixed.hpp"
 
-Fixed::Fixed() : value(0)
+Fixed::Fixed() : stream(std::cout), value(0)
 {
     std::cout << "Default constructor called\n";
 }
 
-Fixed::Fixed( const Fixed &object ) 
+Fixed::Fixed( const Fixed &object ) :stream(std::cout) 
 {
     std::cout << "Copy constructor called\n";
     *this = object;
 }
 
-Fixed::Fixed( const int num )
+Fixed::Fixed( const int num ) : stream(std::cout)
 {
     std::cout << "Int constructor called\n";
     this->value = num * (1 << this->frac);
 }
 
-Fixed::Fixed( const float num )
+Fixed::Fixed( const float num ) : stream(std::cout)
 {
     std::cout << "Float constructor called\n";
     this->value = roundf(num * (1 << this->frac));

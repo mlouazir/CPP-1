@@ -94,9 +94,9 @@ Fixed Fixed::operator-( const Fixed& obj ) const
     return Fixed(this->value - obj.getRawBits());
 }
 
-Fixed Fixed::operator*( const Fixed& obj ) const
+Fixed operator*( const Fixed& lobj, const Fixed& obj ) 
 {
-    return Fixed(((float)(this->value * obj.getRawBits())) / ((float)((1 << this->frac) * (1 << this->frac))));
+    return Fixed(((float)(lobj.getRawBits() * obj.getRawBits())));
 }
 
 Fixed Fixed::operator/( const Fixed& obj ) const
@@ -163,4 +163,10 @@ const Fixed& Fixed::max( const Fixed& obj1, const Fixed& obj2 )
 Fixed::~Fixed()
 {
 
+}
+
+int Fixed::thistest(std::string value){
+    std::cout << "Wili" << std::endl ;
+    std::cout << value << std::endl ;
+    return (0);
 }
