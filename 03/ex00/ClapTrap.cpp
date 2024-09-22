@@ -7,6 +7,7 @@ ClapTrap::ClapTrap() : hitPoints(10), energyPoints(10), attackDamage(0)
 
 ClapTrap::ClapTrap( const std::string& name ) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)
 {
+    this->name = name;
     std::cout << "CalpTrap " << name << " Name Constructor\n";
 }
 

@@ -2,18 +2,18 @@
 
 DiamondTrap::DiamondTrap()
 {
-    this->hitPoints = FragTrap::getHitPoints();
-    this->energyPoints = ScavTrap::getEnergyPoints();
-    this->attackDamage = FragTrap::getAttackDamage();
+    this->hitPoints = 100;
+    this->energyPoints = 50;
+    this->attackDamage = 30;
 }
 
-DiamondTrap::DiamondTrap( const std::string& name ) : ClapTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap( const std::string& name ) : ClapTrap(name)
 {
     this->clapName = name + "_clap_name";
     this->name = name;
-    this->hitPoints = FragTrap::getHitPoints();
-    this->energyPoints = ScavTrap::getEnergyPoints();
-    this->attackDamage = FragTrap::getAttackDamage();
+    this->hitPoints = 100;
+    this->energyPoints = 50;
+    this->attackDamage = 30;
 }
 
 DiamondTrap::DiamondTrap( const DiamondTrap& obj )
@@ -37,9 +37,10 @@ std::string DiamondTrap::getClapName() const
 {
     return this->clapName;
 }
+
 void DiamondTrap::whoAmI( )
 {
-    std::cout << "My name is " << name << " and my clapTap name ` " << clapName << "\n";
+    std::cout << "My name is " << name << " and my clapTap name " << clapName << "\n";
 }
 
 DiamondTrap::~DiamondTrap( )

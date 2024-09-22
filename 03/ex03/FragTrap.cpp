@@ -4,7 +4,7 @@ FragTrap::FragTrap()
 {
     std::cout << "FragTrap Default Constructor\n";
     this->hitPoints = 100;
-    this->energyPoints = 50;
+    this->energyPoints = 100;
     this->attackDamage = 30;
 }
 
@@ -13,7 +13,7 @@ FragTrap::FragTrap( const std::string& name )
     std::cout << "FragTrap " << name << " Name Constructor\n";
     this->name = name;
     this->hitPoints = 100;
-    this->energyPoints = 50;
+    this->energyPoints = 100;
     this->attackDamage = 30;
 }
 
@@ -34,10 +34,9 @@ FragTrap& FragTrap::operator=(const FragTrap& obj)
 }
 
 void FragTrap::highFivesGuys( void ) {
-    std::cout << this->name << " FragTrap is now in keeper mode.\n";
+    std::cout << "Requesting a High Five\n";
 }
 
-FragTrap::~FragTrap()
-{
+FragTrap::~FragTrap() {
     std::cout << "FragTrap " << name << " Destructor\n";
 }

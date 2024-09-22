@@ -2,9 +2,9 @@ SRC=ScavTrap.cpp ClapTrap.cpp FragTrap.cpp DiamondTrap.cpp main.cpp
 
 OBJ=$(SRC:.cpp=.o)
 
-FLAGS=-Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
+FLAGS=-Wall -Wextra -Werror -Wshadow -std=c++98 # -fsanitize=address -g
 
-NAME=fragTrap
+NAME=diamond
 
 all:$(NAME)
 

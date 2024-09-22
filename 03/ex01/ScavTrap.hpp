@@ -10,7 +10,7 @@ public:
     ScavTrap( const std::string& name );
     ScavTrap( const ScavTrap& obj );
     ScavTrap& operator=( const ScavTrap& obj );
-    void attack( const std::string& target ) override;
+    void attack( const std::string& target );
     void guardGate();
     ~ScavTrap();
 };
