@@ -7,9 +7,8 @@ DiamondTrap::DiamondTrap()
     this->attackDamage = 30;
 }
 
-DiamondTrap::DiamondTrap( const std::string& name ) : ClapTrap(name)
+DiamondTrap::DiamondTrap( const std::string& name ) : ClapTrap(name + "_clap_name")
 {
-    this->clapName = name + "_clap_name";
     this->name = name;
     this->hitPoints = 100;
     this->energyPoints = 50;
@@ -25,7 +24,7 @@ DiamondTrap& DiamondTrap::operator=( const DiamondTrap& obj )
 {
     if (this != &obj) {
         this->name = obj.getName();
-        this->clapName = obj.getClapName();
+        this->name = obj.getNameNew();
         this->hitPoints = obj.getHitPoints();
         this->energyPoints = obj.getEnergyPoints();
         this->attackDamage = obj.getAttackDamage();
@@ -33,14 +32,14 @@ DiamondTrap& DiamondTrap::operator=( const DiamondTrap& obj )
     return *this;
 }
 
-std::string DiamondTrap::getClapName() const
+std::string DiamondTrap::getNameNew() const
 {
-    return this->clapName;
+    return this->name;
 }
 
 void DiamondTrap::whoAmI( )
 {
-    std::cout << "My name is " << name << " and my clapTap name " << clapName << "\n";
+    std::cout << "My name is " << this->name << " and my clapTap name " << ClapTrap::name << "\n";
 }
 
 DiamondTrap::~DiamondTrap( )

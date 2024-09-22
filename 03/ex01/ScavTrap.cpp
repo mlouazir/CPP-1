@@ -22,7 +22,7 @@ ScavTrap::ScavTrap( const ScavTrap& obj )
     *this = obj;
 }
 
-ScavTrap& ScavTrap::operator=(const ScavTrap& obj )
+ScavTrap& ScavTrap::operator=( const ScavTrap& obj )
 {
     if (this != &obj) {
         this->name = obj.getName();
@@ -45,7 +45,7 @@ void ScavTrap::attack( const std::string& target )
 }
 
 void ScavTrap::guardGate() {
-    std::cout << this->name << " ScavTrap is now in keeper mode.\n";
+    std::cout << "ScavTrap " << this->name << " is now in keeper mode.\n";
 }
 
 ScavTrap::~ScavTrap()

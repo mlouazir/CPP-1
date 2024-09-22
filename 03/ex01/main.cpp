@@ -12,6 +12,7 @@ int main()
 
     ScavTrap s("John");
     s.attack("Enemy");
+    s.guardGate();
 
-    return 0;ß
+    return 0;
 }
