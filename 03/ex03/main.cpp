@@ -35,5 +35,13 @@ int main()
         d.whoAmI();
     }
 
+    std::cout << "====================================\n";
+
+    {
+        ScavTrap *c = new DiamondTrap;
+
+        delete c;
+    }
+
     return 0;
 }

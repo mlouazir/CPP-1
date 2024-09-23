@@ -2,7 +2,7 @@ SRC=ScavTrap.cpp ClapTrap.cpp main.cpp
 
 OBJ=$(SRC:.cpp=.o)
 
-FLAGS=-Wall -Wextra -Werror -std=c++98 # -fsanitize=address -g
+FLAGS=-Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
 
 NAME=scavTrap
 

@@ -22,7 +22,7 @@ public:
     int getHitPoints( void ) const;
     int getEnergyPoints( void ) const;
     int getAttackDamage( void ) const;
-    ~ClapTrap();
+    virtual ~ClapTrap();
 };
 
 #endif

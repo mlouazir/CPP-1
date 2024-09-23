@@ -11,7 +11,7 @@ DiamondTrap::DiamondTrap()
 DiamondTrap::DiamondTrap( const std::string& name ) : ClapTrap(name + "_clap_name")
 {
     std::cout << "DiamondTrap Name Constructor\n";
-    this->name = name;
+    DiamondTrap::name = name;
     this->hitPoints = 100;
     this->energyPoints = 50;
     this->attackDamage = 30;
