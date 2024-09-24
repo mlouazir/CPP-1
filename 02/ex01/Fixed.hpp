@@ -20,9 +20,10 @@ public:
     void setRawBits( int const raw );
     float toFloat( void ) const;
     int toInt( void ) const;
+    std::ostream& operator<<( const Fixed& obj );// 3
     ~Fixed();
-    std::ostream& operator<<( const Fixed& obj );
 };
 
+//std::ostream& operator<<( std::ostream& stream, const Fixed& obj ); // 2
 
 #endif

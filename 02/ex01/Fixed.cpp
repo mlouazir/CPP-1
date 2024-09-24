@@ -52,7 +52,7 @@ Fixed& Fixed::operator=( const Fixed& other )
     return *this;
 }
 
-std::ostream& operator<<( std::ostream& stream, const Fixed& obj )
+std::ostream& operator<<( const Fixed& obj )
 {
     stream << obj.toFloat();
     return stream;
