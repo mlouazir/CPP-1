@@ -6,7 +6,7 @@
 /*   By: mlouazir <mlouazir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 10:18:54 by mlouazir          #+#    #+#             */
-/*   Updated: 2024/09/25 16:42:55 by mlouazir         ###   ########.fr       */
+/*   Updated: 2024/09/25 17:38:55 by mlouazir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void f() {
 
 int main() {
 
-    // atexit(f);
+    atexit(f);
     {
         IMateriaSource* src = new MateriaSource();
         Ice *c = new Ice();
@@ -48,6 +48,8 @@ int main() {
         delete c;
     }
 
+    std::cout << "================================================\n";
+    
     {
         IMateriaSource* src = new MateriaSource();
         Ice *c = new Ice();
@@ -76,7 +78,6 @@ int main() {
         delete x;
         delete c;
     }
-    std::cout << "================================================\n";
     
     return 0;
 }
