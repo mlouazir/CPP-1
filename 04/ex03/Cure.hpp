@@ -6,7 +6,7 @@
 /*   By: mlouazir <mlouazir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 15:42:55 by mlouazir          #+#    #+#             */
-/*   Updated: 2024/09/24 19:29:55 by mlouazir         ###   ########.fr       */
+/*   Updated: 2024/09/25 15:42:02 by mlouazir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 class Cure : public AMateria
 {
 public:
-    Cure();
+    Cure( );
     Cure( const Cure& obj );
     Cure& operator=( const Cure& obj );
-    AMateria* clone() const;
-    void use(ICharacter& taget);
-    ~Cure();
+    AMateria* clone( ) const;
+    void use( ICharacter& taget );
+    ~Cure( );
 };

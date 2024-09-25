@@ -2,7 +2,7 @@ SRC=main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
 
 OBJ=$(SRC:.cpp=.o)
 
-FLAGS=-Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
+FLAGS=-Wall -Wextra -Werror -std=c++98 # -fsanitize=address -g
 
 NAME=prog
 

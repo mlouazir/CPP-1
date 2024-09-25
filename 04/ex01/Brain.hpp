@@ -6,7 +6,7 @@
 /*   By: mlouazir <mlouazir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 11:47:19 by mlouazir          #+#    #+#             */
-/*   Updated: 2024/09/24 12:48:09 by mlouazir         ###   ########.fr       */
+/*   Updated: 2024/09/25 14:40:51 by mlouazir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,15 @@
 class Brain
 {
 private:
-    int index;
     std::string* ideas;
+    int index;
 public:
-    Brain();
+    Brain( );
     Brain( const Brain& obj );
     Brain& operator=( const Brain& obj );
     void setIdea( std::string idea );
-    std::string* getIdeas() const;
-    ~Brain();
+    std::string* getIdeas ( ) const;
+    void setIndex( int idx );
+    int getIndex( ) const;
+    ~Brain( );
 };

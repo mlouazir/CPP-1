@@ -1,4 +1,4 @@
-SRC=main.cpp Cure.cpp Ice.cpp AMateria.cpp Character.cpp
+SRC=main.cpp Cure.cpp Ice.cpp AMateria.cpp Character.cpp MateriaSource.cpp
 
 OBJ=$(SRC:.cpp=.o)
 
@@ -11,7 +11,7 @@ all:$(NAME)
 $(NAME):$(OBJ)
 	c++ $(FLAGS) $(OBJ) -o $@
 
-%.o : %.cpp AMateria.hpp Cure.hpp Ice.hpp Character.hpp ICharacter.hpp
+%.o : %.cpp AMateria.hpp Cure.hpp Ice.hpp Character.hpp ICharacter.hpp IMateriaSource.hpp MateriaSource.hpp
 	c++ $(FLAGS) -c $< -o $@
 
 clean:

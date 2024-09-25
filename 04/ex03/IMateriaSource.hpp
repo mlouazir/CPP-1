@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MaterialSource.hpp                                 :+:      :+:    :+:   */
+/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlouazir <mlouazir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/24 19:52:16 by mlouazir          #+#    #+#             */
-/*   Updated: 2024/09/24 20:04:04 by mlouazir         ###   ########.fr       */
+/*   Created: 2024/09/24 19:51:26 by mlouazir          #+#    #+#             */
+/*   Updated: 2024/09/25 15:42:43 by mlouazir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "IMateriaSource.hpp"
+#include "AMateria.hpp"
 
-class MaterialSource : public IMaterialSource
+class IMateriaSource
 {
-private:
-    AMateria* materias[4];
 public:
-    MateriaSource();
-    MateriaSource( const MaterialSource& obj);
-    MateriaSource& operator=( const MaterialSource& obj);
-    void learnMateria(AMateria*);
-    AMateria* createMateria(std::string const & type);
-    AMateria* getInventory() const;
-    ~MateriaSource();
-}
+    virtual ~IMateriaSource( ) {}
+    virtual void learnMateria( AMateria* ) = 0;
+    virtual AMateria* createMateria( std::string const & type ) = 0;
+};
